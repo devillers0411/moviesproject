@@ -1,0 +1,85 @@
+/* Home Page Styles */
+.home-page {
+  width: 100%;
+}
+
+.home-hero {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--tertiary-bg) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(229, 9, 20, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--primary-text);
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1.3em;
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-hero {
+    height: 250px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-content p {
+    font-size: 0.95em;
+  }
+
+  .home-container {
+    padding: 30px 16px;
+  }
+}
